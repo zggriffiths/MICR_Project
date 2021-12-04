@@ -1,0 +1,16 @@
+Package: FirstOrderReaction
+Type: Package
+Title: First Order Reaction Kinetics Calculator
+Version: 0.1.0
+Author: Zabrenna Griffiths, Ali Al-Najada, Theresa Jones
+Maintainer: Zabrenna Griffiths <zgriffi3@vols.utk.edu>
+Description: This package calculates different parameters associated with first-order rate reactions. 
+            This package contains functions to calculate the reativity constant(k) and the corresponding half life.
+License: MIT License
+Encoding: UTF-8
+LazyData: true
+Imports: 
+  tidyverse,
+  SciViews,
+  ggplot2
+RoxygenNote: 7.1.2
