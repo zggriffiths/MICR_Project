@@ -135,6 +135,18 @@ n_nest <- decay %>%
          A = map_dbl(fits, safely_get_A_estimate_1))
 ```
 
+## Calculate half time
+
+``` r
+half_time <- (ln(2)/n_nest$k)
+print(half_time)
+```
+
+    ##  [1]        NA 0.6669271 0.6904511 0.8741347 0.8207163 0.6608148        NA
+    ##  [8]        NA 0.6267915 0.6458987 0.6718220 0.7812066 0.6198867 0.5750535
+    ## [15] 0.7089835 0.7552695        NA        NA        NA 0.3378306 0.7711840
+    ## [22] 0.6562649 0.6799571 0.7077025 0.6190121
+
 ## Plots
 
 ## Create predictions and fit the model
@@ -155,7 +167,7 @@ ggplot() +
   facet_wrap(~ treatment)
 ```
 
-![](final_project_0.1_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](final_project_0.1_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
 ``` r
 ggplot() +
@@ -164,7 +176,7 @@ ggplot() +
   facet_wrap(~ site)
 ```
 
-![](final_project_0.1_files/figure-markdown_github/unnamed-chunk-8-2.png)
+![](final_project_0.1_files/figure-markdown_github/unnamed-chunk-9-2.png)
 
 ### Estimated k
 
@@ -175,7 +187,7 @@ ggplot(data = n_nest) +
 
     ## Warning: Removed 6 rows containing non-finite values (stat_boxplot).
 
-![](final_project_0.1_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](final_project_0.1_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 ``` r
 ggplot(data = n_nest) +
@@ -184,6 +196,6 @@ ggplot(data = n_nest) +
 
     ## Warning: Removed 6 rows containing non-finite values (stat_boxplot).
 
-![](final_project_0.1_files/figure-markdown_github/unnamed-chunk-9-2.png)
+![](final_project_0.1_files/figure-markdown_github/unnamed-chunk-10-2.png)
 
 \`\`\`
