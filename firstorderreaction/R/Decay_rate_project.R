@@ -1,3 +1,17 @@
+#' @title Decay rate estimate
+#'
+#' @param k estimate
+#' @param A estimate
+#' @param half_time
+#'
+#' @description the built functions are designed to find safe estimates for A and k parameters, calculate half time, and predict the non-linear model.
+
+
+
+
+
+
+
 # Decay rate estimates
 
 
