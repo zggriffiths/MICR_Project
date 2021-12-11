@@ -1,0 +1,11 @@
+Package: firstorderreaction
+Type: Package
+Title: First Order Reaction Calculation
+Version: 0.1.0
+Author: Ali alnajada, Zabrenna Griffiths, Theresa Jones
+Maintainer: The package maintainer <aalnajad@vols.utk.edu>
+Description: Calculate decay rate, constants, and the half time.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: tidyverse, SciViews, ggplot2, modelr, nls2, tester, testthat
