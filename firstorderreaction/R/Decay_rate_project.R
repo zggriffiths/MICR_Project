@@ -3,6 +3,7 @@
 #' @param k estimate
 #' @param A estimate
 #' @param half_time
+#' @return ggplot of predection with non linear model
 #'
 #' @description the built functions are designed to find safe estimates for A and k parameters, calculate half time, and predict the non-linear model.
 
