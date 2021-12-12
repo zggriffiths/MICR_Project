@@ -54,11 +54,11 @@ A_guess <- exp(linear_intercept)
 
 rn_model <- nls2(data = decay, y ~ A*exp(-k*x), start = list(k = k_guess, A = A_guess))
 
-safe_fit <- function(df) {
+safe_fit <- function(decay) {
   # Tries to fit the NLS model to the data, and returns NA if it can't for whatever reason
   fit <- tryCatch(
     nls2::nls2(formula = y ~ A * exp(-k * x),
-               data = df,
+               data = decay,
                start = list(A = A_guess, k = k_guess)),
     error = function(e) NA)
   fit
@@ -138,6 +138,7 @@ print(half_time)
 unnest <- unnest(n_nest, data)
 grid <- seq(from = min(unnest$x), to = max(unnest$x), length.out = 1000)
 df <- data.frame(x = grid)
+    
 # Get predictions for each model
 preds <- predict(rn_model, newdata = df)
 
